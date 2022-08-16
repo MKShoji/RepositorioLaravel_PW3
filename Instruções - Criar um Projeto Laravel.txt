@@ -1,0 +1,16 @@
+Guia de Criação de um Projeto Laravel:
+
+1 - Baixar o Composer: https://getcomposer.org;
+
+2 - Abrir o Prompt de Comando (ou PowerShell);
+
+3 - Rodar esses comandos: 
+cd\
+mkdir laravel
+cd laravel
+composer create-project laravel/laravel example-app (Cria o projeto)
+php artisan serve (Roda o projeto)
+
+4 - No navegador, acesse 'localhost + endereco' para acessar o projeto na internet;
+
+5 - Digite 'code' no terminal para abrir o projeto no VS Code.
