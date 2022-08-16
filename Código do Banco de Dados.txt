@@ -21,3 +21,44 @@ telefone varchar(14),
 celular varchar(14),
 email varchar(100)
 );
+
+create table tbCategoria (
+idCategoria int primary key auto_increment,
+categoria varchar(50)
+);
+
+create table tbProduto (
+idProduto int primary key auto_increment,
+produto varchar(50),
+valor decimal(18,2),
+idCategoria integer,
+foreign key(idCategoria) references tbCategoria(idCategoria)
+);
+
+create table tbPedido (
+    idPedido int primary key auto_increment,
+    idCliente int,
+    foreign key(idCliente) references tbCliente(idCliente),
+    usuario varchar(50),
+    foreign key(usuario) references tbCliente(usuario),
+    endereco varchar(225),
+    foreign key(endereco) references tbCliente(endereco),
+    numero int,
+    foreign key(numero) references tbCliente(numero),
+    complemento varchar(50),
+    foreign key(complemento) references tbCliente(complemento),
+    cep varchar(10),
+    foreign key(cep) references tbCliente(cep),
+    cidade varchar(225),
+    foreign key(cidade) references tbCliente(cidade),
+    estado varchar(50),
+    foreign key(estado) references tbCliente(estado),
+    telefone varchar(14),
+    foreign key(telefone) references tbCliente(telefone),
+    idProduto int,
+    foreign key(idProduto) references tbProduto(idProduto),
+    produto varchar(50),
+    foreign key(produto) references tbProduto(produto),
+    valor decimal(18,2),
+    foreign key(valor) references tbProduto(valor)
+);

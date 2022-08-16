@@ -24,7 +24,7 @@
 
 
     <footer>
-        <p> Todos os direitos reservados - 2022 </p>
+        <p> Todos os direitos reservados a SaulGoodman - 2022 </p>
     </footer>
 </body>
 </html>
