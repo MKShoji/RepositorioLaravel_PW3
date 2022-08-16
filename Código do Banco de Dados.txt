@@ -1,0 +1,23 @@
+create database bdLaravel;
+use bdLaravel;
+
+create table tbCliente (
+idCliente int primary key auto_increment,
+usuario varchar(50),
+senha varchar(50),
+dataNasc date,
+genero varchar(50),
+estadoCivil varchar(50),
+endereco varchar(225),
+numero int,
+complemento varchar(50),
+cep varchar(10),
+bairro varchar(225),
+cidade varchar(225),
+estado varchar(50),
+cpf varchar(11),
+rg varchar(13),
+telefone varchar(14),
+celular varchar(14),
+email varchar(100)
+);
