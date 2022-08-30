@@ -29,3 +29,5 @@ Route::get('/cliente', function () {
 Route::get('/produto', function () {
     return view('produto');
 });
+
+Route::get('/contato','ContatoController@index');
