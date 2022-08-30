@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\ContatoM1odel;
+use App\ContatoModel;
 
 class ContatoController extends Controller
 {
@@ -14,7 +14,17 @@ class ContatoController extends Controller
      */
     public function index()
     {
-       $contato = ClientModel::all();
+       $cliente = ContatoModel::all();
+
+        foreach ($cliente as $c) {
+            echo "<h1> Id: ". $c->idCliente . "</h1><br />";
+            echo "Usuario: ".$c->usuario . "<br />"; 
+            echo "E-mail: ".$c->email . "<br />"; 
+            echo "Fone: ".$c->telefone . "<br />"; 
+            echo "dataNasc: ".$c->dataNasc . "<br />"; 
+            echo "CPF:".$c->cpf . "<br />"; 
+            echo "<br />"; 
+        }
 
     }
 
