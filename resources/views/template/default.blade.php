@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel</title>
 
-    <link rel="stylesheet" href="{{url('css/style.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="{{url('css/style.css')}}">
 </head>
 <body>
 
@@ -28,6 +27,10 @@
                     <li><a href="/pedido">Pedido</a></li>
                     <li><a href="/produto">Produto</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -36,7 +39,7 @@
 
 
     <footer>
-        <p> Todos os direitos reservados a <mark> Matheus Shoji <mark> e <mark> Luiz Fernando <mark> </p>
+        <p> Todos os direitos reservados a <b>Matheus Shoji e Luiz Fernando<b></p>
         <p> 2022 </p>
     </footer>
 </body>
