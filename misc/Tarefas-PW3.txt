@@ -1,5 +1,6 @@
 Tarefas pendentes do Projeto Laravel:
 
-Para semana que vem {
-    
+Para semana que vem (06/09) {
+    Melhorar o design do site [ ]
+    Adicionar a parte do administrador (pegar do outro projeto) [ ]
 }
