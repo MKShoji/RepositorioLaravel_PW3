@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ContatoModel;
+use App\ClienteModel;
 
-class ContatoController extends Controller
+class ClienteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,17 +14,9 @@ class ContatoController extends Controller
      */
     public function index()
     {
-       $cliente = ContatoModel::all();
+       $cliente = ClienteModel::all();
 
-        foreach ($cliente as $c) {
-            echo "<h1> Id: ". $c->idCliente . "</h1><br />";
-            echo "Usuario: ".$c->usuario . "<br />"; 
-            echo "E-mail: ".$c->email . "<br />"; 
-            echo "Fone: ".$c->telefone . "<br />"; 
-            echo "dataNasc: ".$c->dataNasc . "<br />"; 
-            echo "CPF:".$c->cpf . "<br />"; 
-            echo "<br />"; 
-        }
+       return view('cliente', compact('cliente'));
 
     }
 

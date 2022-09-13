@@ -30,4 +30,9 @@ Route::get('/produto', function () {
     return view('produto');
 });
 
-Route::get('/contato','ContatoController@index');
+Route::get('/cliente','ClienteController@index');
+Route::get('/categoria','CategoriaController@index');
+Route::get('/pedido','PedidoController@index');
+Route::get('/produto','ProdutoController@index');
+
+Route::post('/categoria/inserir','CategoriaController@index');

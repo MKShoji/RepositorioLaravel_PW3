@@ -21,11 +21,11 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/contato">Contato</a></li>
                     <li><a href="/categoria">Categoria</a></li>
                     <li><a href="/cliente">Cliente</a></li>
                     <li><a href="/pedido">Pedido</a></li>
                     <li><a href="/produto">Produto</a></li>
+                    <li><a href="/contato">Contato</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
