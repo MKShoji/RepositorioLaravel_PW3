@@ -1,12 +1,26 @@
 @extends('template.default')
 @section('content')
 
-    <section>
+    <section class="container">
         <h1> Produto </h1>
 
         @foreach($produto as $p)
-            <p>{{$p->idProduto}}</p>
-            <p>{{$p->produto}}</p>
+        <table class="table">
+            <thead>
+                <th> idPedido </th>
+                <th> produto </th>
+                <th> valor </th>
+                <th> idCategoria </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{$p->idProduto}} </td>
+                    <td> {{$p->produto}} </td>
+                    <td> {{$p->valor}} </td>
+                    <td> {{$p->idCategoria}} </td>
+                </tr>
+            </tbody>
+        </table>
         @endforeach
     </section>
 

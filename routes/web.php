@@ -35,4 +35,4 @@ Route::get('/categoria','CategoriaController@index');
 Route::get('/pedido','PedidoController@index');
 Route::get('/produto','ProdutoController@index');
 
-Route::post('/categoria/inserir','CategoriaController@index');
+Route::post('/categoria/inserir','CategoriaController@store');

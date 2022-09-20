@@ -63,8 +63,5 @@ create table tbPedido (
     foreign key(valor) references tbProduto(valor)
 );
 
-
-// INSERT
-
 INSERT INTO tbcliente (idCliente, usuario, senha, dataNasc, genero, estadoCivil, endereco, numero, complemento, cep, bairro, cidade, estado, cpf, rg, telefone, celular, email)
 VALUES (null, 'Robson123', 'robson-senha', '1996-05-20', 'masculino', 'Casado', 'Rua Jujuba', 69, 'casa' ,'1234567891', 'Cocai', 'Guarulhos', 'São Paulo', '62142542468', '389773645', '9133571482', '82980200544', 'robson@robson.com');

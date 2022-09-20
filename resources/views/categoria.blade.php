@@ -1,21 +1,38 @@
 @extends('template.default')
 @section('content')
 
-    <section>
+    <section class="container">
         <h1> Categoria </h1>
 
         <form action="{{url('/categoria/inserir')}}" method="post">
             {{csrf_field()}}
 
-            <div>
-                <input type="text" name="txCategoria" placeholder="Categoria" value="categoria">
+            <div class="form-group">
+                <input class="form-control" type="text" name="txCategoria" placeholder="Categoria" >
             </div>
 
-            <div>
-                <input type="submit" value="Salvar">
+            <div class="form-group">
+                <input class="btn btn-primary btn-lg" type="submit" value="Salvar">
             </div>
 
         </form>
+
+        @foreach ($categoria as $c)
+        <table class='table'>
+            <thead>
+                <th> idCategoria </th>
+                <th> Categoria </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{$c->idCategoria}} </td>
+                    <td> {{$c->categoria}} </td>
+                </tr>
+            </tbody>
+        </table>
+        @endforeach
+
+
 
     </section>
 
