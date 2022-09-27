@@ -38,7 +38,14 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $produto = new ProdutoModel();
+
+        $produto -> produto = $request -> txProduto;
+        $produto -> valor = $request -> txValor;
+        
+        $produto -> save();
+
+        return redirect("/produto");
     }
 
     /**
@@ -83,6 +90,7 @@ class ProdutoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ProdutoModel::where('idProduto',$id)->delete();
+        return redirect("/produto");
     }
 }

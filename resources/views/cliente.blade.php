@@ -1,7 +1,7 @@
 @extends('template.default')
 @section('content')
 
-    <section >
+    <section>
         <h1> Cliente </h1>
 
         @foreach($cliente as $c)    

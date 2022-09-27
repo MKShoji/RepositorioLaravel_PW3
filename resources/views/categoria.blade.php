@@ -22,11 +22,13 @@
             <thead>
                 <th> idCategoria </th>
                 <th> Categoria </th>
+                <th> Excluir </th>
             </thead>
             <tbody>
                 <tr>
                     <td> {{$c->idCategoria}} </td>
                     <td> {{$c->categoria}} </td>
+                    <td> <a href="/categoria/{{$c->idCategoria}}"> Excluir </a></td>
                 </tr>
             </tbody>
         </table>
