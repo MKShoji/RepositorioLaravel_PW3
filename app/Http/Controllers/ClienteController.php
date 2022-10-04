@@ -38,7 +38,29 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cliente = new ClienteModel();
+
+        $cliente -> usuario = $request -> txUsuario;
+        $cliente -> senha = $request -> txSenha;
+        $cliente -> dataNasc = $request -> txDataNasc;
+        $cliente -> genero = $request -> txGenero;
+        $cliente -> estadoCivil = $request -> txEstadoCivil;
+        $cliente -> endereco = $request -> txEndereco;
+        $cliente -> numero = $request -> txNumero;
+        $cliente -> complemento = $request -> txComplemento;
+        $cliente -> cep = $request -> txCep;
+        $cliente -> bairro = $request -> txBairro;
+        $cliente -> cidade = $request -> txCidade;
+        $cliente -> estado = $request -> txEstado;
+        $cliente -> cpf = $request -> txCpf;
+        $cliente -> rg = $request -> txRg;
+        $cliente -> telefone = $request -> txTelefone;
+        $cliente -> celular = $request -> txCelular;
+        $cliente -> email = $request -> txEmail;
+        
+        $cliente -> save();
+
+        return redirect("/cliente");
     }
 
     /**
@@ -83,6 +105,7 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ClienteModel::where('idCliente',$id)->delete();
+            return redirect("/cliente");
     }
 }

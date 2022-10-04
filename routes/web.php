@@ -34,7 +34,8 @@ Route::get('/cliente','ClienteController@index');
 Route::get('/categoria','CategoriaController@index');
 Route::get('/pedido','PedidoController@index');
 Route::get('/produto','ProdutoController@index');
-
+Route::post('/cliente/inserir','ClienteController@store');
 Route::post('/categoria/inserir','CategoriaController@store');
 Route::post('/produto/inserir','ProdutoController@store');
+Route::get('/cliente/{id}','ClienteController@destroy');
 Route::get('/categoria/{id}','CategoriaController@destroy');

@@ -1,8 +1,38 @@
 @extends('template.default')
 @section('content')
 
-    <section>
+    <section class="container">
         <h1> Cliente </h1>
+
+        <form action="{{url('/cliente/inserir')}}" method="post">
+            {{csrf_field()}}
+            <div class="form-cliente">
+                <center>
+                    <input type="text" name="txUsuario" placeholder="Usuário" >
+                    <input type="text" name="txSenha" placeholder="Senha" ><br>
+                    <input type="text" name="txDataNasc" placeholder="Data de Nascimento" >
+                    <input type="text" name="txGenero" placeholder="Gênero" ><br>
+                    <input type="text" name="txEstadoCivil" placeholder="Estado Civil" >
+                    <input type="text" name="txEndereco" placeholder="Endereço" ><br>
+                    <input type="text" name="txNumero" placeholder="Número" >
+                    <input type="text" name="txComplemento" placeholder="Complemento"><br>
+                    <input type="text" name="txCep" placeholder="CEP" >
+                    <input type="text" name="txBairro" placeholder="Bairro" ><br>
+                    <input type="text" name="txCidade" placeholder="Cidade" >
+                    <input type="text" name="txEstado" placeholder="Estado" ><br>
+                    <input type="text" name="txCpf" placeholder="CPF" >
+                    <input type="text" name="txRg" placeholder="RG" ><br>
+                    <input type="text" name="txTelefone" placeholder="Telefone" >
+                    <input type="text" name="txCelular" placeholder="Celular" ><br>
+                    <input type="text" name="txEmail" placeholder="Email" >
+    
+                <div class="form-group">
+                    <input class="btn btn-primary btn-lg" type="submit" value="Salvar">
+                </div>
+                </center>
+            </div>  
+
+        </form>
 
         @foreach($cliente as $c)    
             <table class="table">
@@ -46,6 +76,7 @@
                         <td> {{$c->telefone}} </td>
                         <td> {{$c->celular}} </td>
                         <td> {{$c->email}} </td>
+                        <td> <a href="/cliente/{{$c->idCliente}}"> Excluir </a></td>
                     </tr>
                 </tbody>
             </table>
