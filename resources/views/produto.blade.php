@@ -24,7 +24,7 @@
         @foreach($produto as $p)
         <table class="table">
             <thead>
-                <th> idPedido </th>
+                <th> idProduto </th>
                 <th> produto </th>
                 <th> valor </th>
                 <th> idCategoria </th>
@@ -35,6 +35,8 @@
                     <td> {{$p->produto}} </td>
                     <td> {{$p->valor}} </td>
                     <td> {{$p->idCategoria}} </td>
+                    <td> <a href="/produto/{{$p->idProduto}}"> Excluir </a></td>
+
                 </tr>
             </tbody>
         </table>

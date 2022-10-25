@@ -23,7 +23,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td> {{$p->idProduto}} </td>
+                    <td> {{$p->idPedido}} </td>
                     <td> {{$p->idCliente}} </td>
                     <td> {{$p->usuario}} </td>
                     <td> {{$p->endereco}} </td>
@@ -36,6 +36,7 @@
                     <td> {{$p->idProduto}} </td>
                     <td> {{$p->produto}} </td>
                     <td> {{$p->valor}} </td>
+                    <td> <a href="/pedido/{{$p->idPedido}}"> Excluir </a></td>
                 </tr>
             </tbody>
         </table>
