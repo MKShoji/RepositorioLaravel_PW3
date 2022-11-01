@@ -11,7 +11,7 @@
                 <div class="form-cliente">
                     <center>
                         <input type="text" name="txUsuario" placeholder="Usuário" >
-                        <input type="text" name="txSenha" placeholder="Senha" ><br>
+                        <input type="password" name="txSenha" placeholder="Senha" ><br>
                         <input type="text" name="txDataNasc" placeholder="Data de Nascimento" >
                         <input type="text" name="txGenero" placeholder="Gênero" ><br>
                         <input type="text" name="txEstadoCivil" placeholder="Estado Civil" >

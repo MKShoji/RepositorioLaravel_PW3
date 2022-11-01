@@ -42,3 +42,7 @@ Route::get('/cliente/{id}','ClienteController@destroy');
 Route::get('/categoria/{id}','CategoriaController@destroy');
 Route::get('/produto/{id}','ProdutoController@destroy');
 Route::get('/pedido/{id}','PedidoController@destroy');
+
+// Consultas testes
+
+Route::get('/produto','ProdutoController@consulta');

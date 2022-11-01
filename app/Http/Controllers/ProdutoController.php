@@ -20,6 +20,16 @@ class ProdutoController extends Controller
 
     }
 
+    // Função de consulta (teste)
+    /**
+     *  public function consulta() {
+    *   $produto = ProdutoModel::where('name','ps5')->get();
+    *
+    *   return view('produto', compact('produto'));
+    *      }
+     */
+
+
     /**
      * Show the form for creating a new resource.
      *

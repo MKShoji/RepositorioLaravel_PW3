@@ -1,0 +1,17 @@
+Link: https://laravel.com/docs/4.2/queries
+
+Exemplos: 
+ public function index()
+    {
+        $contato = ContatoModel::all();
+        //$contato = ContatoModel::where('idContato',4)->get();
+        //$contato = ContatoModel::where('nome','ana')->get();        
+        //$contato = ContatoModel::where('idContato','>',2)->get();
+        //$contato = ContatoModel::where('idContato','>',2)->get();
+        //$contato = ContatoModel::where('nome','=','Antonio')->get();
+        //$contato = ContatoModel::where('idContato','>',0)->orderBy('nome','desc')->get();
+        //$contato = ContatoModel::where('idContato','>',0)->orderBy('nome','asc')->get();        
+
+        return view('contato',compact('contato'));
+    }
+

@@ -1,0 +1,6 @@
+1 - Para o projeto criar as consultas:
+ - Por nome do produtos;
+ - Entre valores;
+ - Exibir os campos produto, categoria e valor (inner join com Laravel);
+
+2 - Rotina de edição em pelo menos duas páginas
