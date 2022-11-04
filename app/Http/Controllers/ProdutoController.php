@@ -14,20 +14,22 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-       $produto = ProdutoModel::all();
-
-       return view('produto', compact('produto'));
 
     }
 
     // Função de consulta (teste)
-    /**
-     *  public function consulta() {
-    *   $produto = ProdutoModel::where('name','ps5')->get();
-    *
-    *   return view('produto', compact('produto'));
-    *      }
-     */
+    
+    public function consultaAll() {
+        $produto = ProdutoModel::all();
+        return view('produto', compact('produto'));
+    }
+
+    public function consulta() {
+       $produto = ProdutoModel::where('produto','xbox series s')->get();
+    
+       return view('produto', compact('produto'));
+    }
+     
 
 
     /**
@@ -77,7 +79,9 @@ class ProdutoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $produto = ProdutoModel::find($id);
+        $title = "Editar produto - {$produto->produto}";
+        return view ('', compact('title', 'produto'));
     }
 
     /**

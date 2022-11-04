@@ -3,7 +3,7 @@
 
     <section class="container">
         <h1> Produto </h1>
-        <h3> Adiconar um produto </h3>
+        <h3> Adicionar um produto </h3>
 
         <form action="{{url('/produto/inserir')}}" method="post">
             {{csrf_field()}}
@@ -23,6 +23,9 @@
 
         </form>
 
+
+        <!-- Consulta cada produto da tabela e retorna  na view-->
+
         @foreach($produto as $p)
         <table class="table">
             <thead>
@@ -38,17 +41,18 @@
                     <td> {{$p->valor}} </td>
                     <td> {{$p->idCategoria}} </td>
                     <td> <a href="/produto/{{$p->idProduto}}"> Excluir </a></td>
-
+                    <td> <a href="/produto-editar/{{$p->idProduto}}/editar"> Editar</a></td>
                 </tr>
             </tbody>
         </table>
         @endforeach
     </section>
 
+    <section>
     
-
-    <section class="container">
-        <form action="{{url('/produto/inserir')}}"></form>
     </section>
+
+
+    
 
 @endsection
