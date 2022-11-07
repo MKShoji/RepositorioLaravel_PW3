@@ -51,3 +51,4 @@ Route::get('/produto','ProdutoController@consultaAll');
 Route::post('/produto/inserir','ProdutoController@store');
 Route::get('/produto/{id}','ProdutoController@destroy');
 Route::get('/produto-editar/{id}/editar','ProdutoController@edit');
+Route::get('/produto-alterar/{id}','ProdutoController@update');

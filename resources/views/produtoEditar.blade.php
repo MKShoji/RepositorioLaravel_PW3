@@ -18,7 +18,6 @@
 
         </form>
 
-        @endforeach
     </section>
 
 @endsection
