@@ -3,9 +3,9 @@
 
     <section class="container">
         <h1> Produto </h1>
-        <h3> Editar produto </h3>
+        <h3> Pesquisar produto </h3>
 
-        <form action="{{url('/produto-alterar/'.$produto->idProduto)}}" method="post">
+        <form action="{{url('/produto-pesquisa')}}" method="post">
             {{csrf_field()}}
 
             <div class="form-group">

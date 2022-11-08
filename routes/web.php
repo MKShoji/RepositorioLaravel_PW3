@@ -34,21 +34,29 @@ Route::get('/produto-consulta', function () {
 });
 
 Route::get('/cliente','ClienteController@index');
-Route::get('/categoria','CategoriaController@index');
+
 Route::get('/pedido','PedidoController@index');
 
 Route::post('/cliente/inserir','ClienteController@store');
-Route::post('/categoria/inserir','CategoriaController@store');
+
 
 Route::post('/pedido/inserir','PedidoController@store');
 Route::get('/cliente/{id}','ClienteController@destroy');
-Route::get('/categoria/{id}','CategoriaController@destroy');
+
 
 Route::get('/pedido/{id}','PedidoController@destroy');
 
-// Funções Produto
+// Categoria Produto
 Route::get('/produto','ProdutoController@consultaAll');
 Route::post('/produto/inserir','ProdutoController@store');
 Route::get('/produto/{id}','ProdutoController@destroy');
 Route::get('/produto-editar/{id}/editar','ProdutoController@edit');
-Route::get('/produto-alterar/{id}','ProdutoController@update');
+Route::post('/produto-alterar/{id}','ProdutoController@update');
+
+
+// Rotas Categoria
+Route::get('/categoria','CategoriaController@index');
+Route::post('/categoria/inserir','CategoriaController@store');
+Route::get('/categoria/{id}','CategoriaController@destroy');
+Route::get('/categoria-editar/{id}/editar','CategoriaController@edit');
+Route::post('/categoria-alterar/{id}','CategoriaController@update');

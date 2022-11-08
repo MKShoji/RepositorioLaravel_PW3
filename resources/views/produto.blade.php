@@ -48,11 +48,30 @@
         @endforeach
     </section>
 
-    <section>
     
+    <section class="container">
+
+        <h2> Resultado Filtro </h2>
+
+        @foreach($produtoC as $p)
+
+            <table class="table">
+                <thead>
+                    <th> idProduto </th>
+                    <th> produto </th>
+                    <th> valor </th>
+                    <th> idCategoria </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> {{$p->idProduto}} </td>
+                        <td> {{$p->produto}} </td>
+                        <td> {{$p->valor}} </td>
+                        <td> {{$p->idCategoria}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        @endforeach
     </section>
-
-
-    
 
 @endsection

@@ -21,15 +21,12 @@ class ProdutoController extends Controller
     
     public function consultaAll() {
         $produto = ProdutoModel::all();
-        return view('produto', compact('produto'));
-    }
-
-    public function consulta() {
-       $produto = ProdutoModel::where('produto','xbox series s')->get();
+        $produtoC = ProdutoModel::where('produto', 'PS4')->get();
+        return view('produto', compact('produto', 'produtoC'));
+    }    
     
-       return view('produto', compact('produto'));
+    public function filtro() {
     }
-     
 
 
     /**
@@ -93,7 +90,9 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $produto = ProdutoModel::find($id);
+        $produto->update(['produto'=>$request->txProduto]);
+        return redirect()->action('ProdutoController@consultaAll');
     }
 
     /**

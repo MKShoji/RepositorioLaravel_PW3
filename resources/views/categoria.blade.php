@@ -29,6 +29,7 @@
                     <td> {{$c->idCategoria}} </td>
                     <td> {{$c->categoria}} </td>
                     <td> <a href="/categoria/{{$c->idCategoria}}"> Excluir </a></td>
+                    <td> <a href="/categoria-editar/{{$c->idCategoria}}/editar"> Editar </a></td>
                 </tr>
             </tbody>
         </table>

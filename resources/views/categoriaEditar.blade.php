@@ -2,14 +2,14 @@
 @section('content')
 
     <section class="container">
-        <h1> Produto </h1>
-        <h3> Editar produto </h3>
+        <h1> Categoria </h1>
+        <h3> Editar Categoria </h3>
 
-        <form action="{{url('/produto-alterar/'.$produto->idProduto)}}" method="post">
+        <form action="{{url('/categoria-alterar/'.$categoria->idCategoria)}}" method="post">
             {{csrf_field()}}
 
             <div class="form-group">
-                <input class="form-control" type="text" name="txProduto" placeholder="Nome produto" value="{{$produto->produto}}">
+                <input class="form-control" type="text" name="txCategoria" placeholder="Nome Categoria" value="{{$categoria->categoria}}">
             </div>
 
             <div class="form-group">
