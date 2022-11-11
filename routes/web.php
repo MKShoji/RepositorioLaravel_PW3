@@ -29,8 +29,8 @@ Route::get('/cliente', function () {
 Route::get('/produto', function () {
     return view('produto');
 });
-Route::get('/produto-consulta', function () {
-    return view('produto-consulta');
+Route::get('/produtoSearch', function () {
+    return view('produto-search');
 });
 
 Route::get('/cliente','ClienteController@index');
@@ -48,6 +48,8 @@ Route::get('/pedido/{id}','PedidoController@destroy');
 
 // Categoria Produto
 Route::get('/produto','ProdutoController@consultaAll');
+Route::get('/produtoSearch','ProdutoController@search');
+Route::get('/produtoSearch','ProdutoController@search');
 Route::post('/produto/inserir','ProdutoController@store');
 Route::get('/produto/{id}','ProdutoController@destroy');
 Route::get('/produto-editar/{id}/editar','ProdutoController@edit');

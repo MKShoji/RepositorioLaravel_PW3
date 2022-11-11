@@ -21,12 +21,19 @@ class ProdutoController extends Controller
     
     public function consultaAll() {
         $produto = ProdutoModel::all();
-        $produtoC = ProdutoModel::where('produto', 'PS4')->get();
-        return view('produto', compact('produto', 'produtoC'));
+        return view('produto', compact('produto'));
     }    
-    
-    public function filtro() {
+
+    public function search() {
+        $produto = ProdutoModel::all();
+        $produtoC = ProdutoModel::where('produto','PS4')->get(); 
+        return view('produtoSearch', compact('produtoC', 'produto'));
     }
+
+    public function filtro(Resquest $request) {
+
+    }
+    
 
 
     /**
