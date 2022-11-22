@@ -37,6 +37,11 @@ class CategoriaController extends Controller
 
         $categoria -> save();
     }
+
+    public function deleteCategoriaById($id){
+        CategoriaModel::where('idCategoria',$id)->delete();
+    }
+
     /**
      * Show the form for creating a new resource.
      *
