@@ -20,6 +20,23 @@ class CategoriaController extends Controller
 
     }
 
+    public function categoria() {
+        $categoria = CategoriaModel::all();
+        return $categoria;
+    }
+
+    public function categoriaById($id) {
+        $categoria = CategoriaModel::where('idCategoria', '=', $id)->get();
+        return $categoria;
+    }
+
+    public function categoriaSalvar(Request $request) {
+        $categoria = new CategorialModel;
+
+        $categoria->categoria = $request->input('categoria');
+
+        $categoria -> save();
+    }
     /**
      * Show the form for creating a new resource.
      *

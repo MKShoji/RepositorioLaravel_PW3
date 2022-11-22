@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/categoria','CategoriaController@categoria');
+Route::get('/categoria/{id}','CategoriaController@categoriaById');
+Route::post('/categoria','CategoriaController@categoriaSalvar');
